@@ -35,16 +35,19 @@ class Program
             }
         else if (input == "3")
             {
-                Console.WriteLine("Saving...");
-                journal.SaveToFile(Console.ReadLine());
+                Console.WriteLine("Loading....");
+                journal.LoadFromFile("myJournal.txt");
+                journal.DisplayAll();
             }
         else if (input == "4")
-            {
-                journal.LoadFromFile(Console.ReadLine());
+            {   
+                Console.WriteLine("Saving...");
+                journal.SaveToFile("myJournal.txt");
+                Console.WriteLine("Saved successfully!");
             }
         else if (input == "5")
             {
-                Console.WriteLine("Exinting...");
+                Console.WriteLine("See you next time!");
                 run = false;
             }
         }
